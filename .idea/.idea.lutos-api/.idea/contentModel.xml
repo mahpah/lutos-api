@@ -37,6 +37,7 @@
           </e>
         </e>
         <e p="Lutos.Tests" t="IncludeRecursive">
+          <e p="CalculatorFixture.cs" t="Include" />
           <e p="CalculatorTests.cs" t="Include" />
           <e p="Lutos.Tests.csproj" t="IncludeRecursive" />
           <e p="MoneyTests.cs" t="Include" />
