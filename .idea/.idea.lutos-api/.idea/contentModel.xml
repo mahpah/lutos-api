@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
-    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_lutos-api.-1151494804.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_lutos-api.-331989301.00" t="ExcludeRecursive" />
     <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.0.1/build/netcoreapp1.0" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
@@ -15,6 +13,27 @@
       <e p="lutos-api.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="src" t="Include">
+        <e p="Lutos.Api" t="IncludeRecursive">
+          <e p="Controllers" t="Include">
+            <e p="BooksController.cs" t="Include" />
+          </e>
+          <e p="Lutos.Api.csproj" t="IncludeRecursive" />
+          <e p="Program.cs" t="Include" />
+          <e p="Properties" t="Include">
+            <e p="launchSettings.json" t="Include" />
+          </e>
+          <e p="Startup.cs" t="Include" />
+          <e p="appsettings.Development.json" t="Include" />
+          <e p="appsettings.json" t="Include" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp2.2" t="Include">
+                <e p="Lutos.Api.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Lutos.Domain" t="IncludeRecursive">
           <e p="Aggregates" t="Include">
             <e p="BookAggregate" t="Include">
@@ -63,6 +82,9 @@
           </e>
         </e>
         <e p="Lutos.Tests" t="IncludeRecursive">
+          <e p="Api" t="Include">
+            <e p="BookApiTests.cs" t="Include" />
+          </e>
           <e p="Domain" t="Include">
             <e p="CalculatorFixture.cs" t="Include" />
             <e p="CalculatorTests.cs" t="Include" />
