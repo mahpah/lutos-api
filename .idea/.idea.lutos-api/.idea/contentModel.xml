@@ -23,8 +23,10 @@
               <e p="Money.cs" t="Include" />
             </e>
           </e>
-          <e p="Calculator.cs" t="Include" />
           <e p="Lutos.Domain.csproj" t="IncludeRecursive" />
+          <e p="Services" t="Include">
+            <e p="Calculator.cs" t="Include" />
+          </e>
           <e p="bin" t="ExcludeRecursive" />
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
