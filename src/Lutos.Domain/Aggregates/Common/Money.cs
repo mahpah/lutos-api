@@ -7,10 +7,11 @@ namespace Lutos.Domain.Aggregates.Common
 
         public Money(int amount, Currency currency)
         {
-
+            Amount = amount;
+            Currency = currency;
         }
 
-        public Money(int amount)
+        public Money(int amount) : this(amount, Currency.Usd)
         {
 
         }

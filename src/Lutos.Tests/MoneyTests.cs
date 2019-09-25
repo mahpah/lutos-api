@@ -19,7 +19,6 @@ namespace Lutos.Tests
         public void money_should_have_amount_in_usd_by_default()
         {
             var fiveBuck = new Money(5);
-            fiveBuck.Amount.Should().Be(5);
             fiveBuck.Currency.Should().Be(Usd);
         }
     }
