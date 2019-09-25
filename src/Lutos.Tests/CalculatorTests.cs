@@ -1,4 +1,3 @@
-using System;
 using FluentAssertions;
 using Lutos.Domain;
 using Xunit;
@@ -15,9 +14,9 @@ namespace Lutos.Tests
 
             // act
             var sum = sut.Sum(2, 2);
-            
+
             // verify
-            sum.Should().Equals(4);
+            sum.Should().Be(4);
         }
     }
 }
