@@ -5,7 +5,7 @@ using Moq;
 using Xunit;
 using static Lutos.Domain.Aggregates.Common.Currency;
 
-namespace Lutos.Tests
+namespace Lutos.Tests.Domain
 {
     public class CalculatorTests : IClassFixture<CalculatorFixture>
     {

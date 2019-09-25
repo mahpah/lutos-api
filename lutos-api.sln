@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lutos.Domain", "src\Lutos.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lutos.Tests", "src\Lutos.Tests\Lutos.Tests.csproj", "{AA1E4F58-BBE2-486E-A04D-2353CAB974F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lutos.Infrastructure", "src\Lutos.Infrastructure\Lutos.Infrastructure.csproj", "{6046F650-FAEB-4598-B26A-74A9531B1E9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,9 +48,22 @@ Global
 		{AA1E4F58-BBE2-486E-A04D-2353CAB974F3}.Release|x64.Build.0 = Release|Any CPU
 		{AA1E4F58-BBE2-486E-A04D-2353CAB974F3}.Release|x86.ActiveCfg = Release|Any CPU
 		{AA1E4F58-BBE2-486E-A04D-2353CAB974F3}.Release|x86.Build.0 = Release|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Debug|x64.Build.0 = Debug|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Debug|x86.Build.0 = Debug|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Release|x64.ActiveCfg = Release|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Release|x64.Build.0 = Release|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Release|x86.ActiveCfg = Release|Any CPU
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{38B116B0-832E-40DC-9867-B9FA8AFFCA68} = {AA0985B0-AC03-478A-B57E-F176588545BC}
 		{AA1E4F58-BBE2-486E-A04D-2353CAB974F3} = {AA0985B0-AC03-478A-B57E-F176588545BC}
+		{6046F650-FAEB-4598-B26A-74A9531B1E9E} = {AA0985B0-AC03-478A-B57E-F176588545BC}
 	EndGlobalSection
 EndGlobal
