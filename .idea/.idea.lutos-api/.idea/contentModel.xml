@@ -47,6 +47,9 @@
             </e>
           </e>
           <e p="Lutos.Domain.csproj" t="IncludeRecursive" />
+          <e p="SeedWorks" t="Include">
+            <e p="QueryResult.cs" t="Include" />
+          </e>
           <e p="Services" t="Include">
             <e p="Calculator.cs" t="Include" />
             <e p="IBankService.cs" t="Include" />
@@ -83,6 +86,7 @@
         </e>
         <e p="Lutos.Tests" t="IncludeRecursive">
           <e p="Api" t="Include">
+            <e p="ApiServerFactory.cs" t="Include" />
             <e p="BookApiTests.cs" t="Include" />
           </e>
           <e p="Domain" t="Include">

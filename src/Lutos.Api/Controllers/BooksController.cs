@@ -1,5 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Lutos.Domain.Aggregates.BookAggregate;
+using Lutos.Domain.SeedWorks;
+using Lutos.Infrastructure.DataAccess;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Lutos.Api.Controllers
 {
@@ -7,10 +13,23 @@ namespace Lutos.Api.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly LutosDbContext _dbContext;
+
+        public BooksController(LutosDbContext dbContext)
         {
-            return Ok();
+            _dbContext = dbContext;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<QueryResult<Book>>> Get()
+        {
+            var list = await _dbContext.Books.Skip(0).Take(10).ToListAsync();
+            var count = await _dbContext.Books.LongCountAsync();
+            return Ok(new QueryResult<Book>
+            {
+                Items = list,
+                Count = count,
+            });
         }
 
         // GET api/values/5
