@@ -1,4 +1,5 @@
 using Lutos.Domain.Services;
+using Moq;
 
 namespace Lutos.Tests
 {
@@ -6,9 +7,12 @@ namespace Lutos.Tests
     {
         private readonly Calculator _calculator;
         public Calculator Calculator => _calculator;
+        public Mock<IBankService> MockBankService { get; private set; }
+
         public CalculatorFixture()
         {
-            _calculator = new Calculator();
+            MockBankService = new Mock<IBankService>();
+            _calculator = new Calculator(MockBankService.Object);
         }
     }
 }

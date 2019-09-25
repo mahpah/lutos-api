@@ -29,5 +29,14 @@ namespace Lutos.Tests
             Action act = () => new Money(-10);
             act.Should().Throw<ArgumentException>();
         }
+
+        [Fact]
+        public void money_with_the_same_amount_and_currency_are_equal()
+        {
+            var m1 = new Money(1, Usd);
+            m1.Should().Be(new Money(1, Usd));
+            m1.Should().NotBe(new Money(1, Gbp));
+            m1.Should().NotBe(new Money(2, Usd));
+        }
     }
 }

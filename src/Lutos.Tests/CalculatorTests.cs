@@ -1,15 +1,20 @@
 using FluentAssertions;
+using Lutos.Domain.Aggregates.Common;
 using Lutos.Domain.Services;
+using Moq;
 using Xunit;
+using static Lutos.Domain.Aggregates.Common.Currency;
 
 namespace Lutos.Tests
 {
     public class CalculatorTests : IClassFixture<CalculatorFixture>
     {
+        private readonly CalculatorFixture _fixture;
         private readonly Calculator _calculator;
 
         public CalculatorTests(CalculatorFixture fixture)
         {
+            _fixture = fixture;
             _calculator = fixture.Calculator;
         }
 
@@ -48,6 +53,25 @@ namespace Lutos.Tests
             var aAdd1 = _calculator.Sum(3, 1);
             var aAdd1Add1 = _calculator.Sum(aAdd1, 1);
             aAdd1Add1.Should().Be(_calculator.Sum(a, 2));
+        }
+
+        [Fact]
+        public void should_convert_between_currency()
+        {
+            _fixture.MockBankService
+                .Setup(t => t.GetConversionRate(
+                    It.Is<Currency>(a => a == Usd),
+                    It.Is<Currency>(a => a == Vnd)))
+                .Returns(20_000);
+            var fiveBuck = new Money(5, Usd);
+            var oneThousandDong = new Money(100_000, Vnd);
+            _calculator.Convert(fiveBuck, Vnd).Should().Be(oneThousandDong);
+
+            _fixture.MockBankService
+                .Verify(t => t.GetConversionRate(
+                        It.Is<Currency>(a => a == Usd),
+                        It.Is<Currency>(a => a == Vnd)),
+                    Times.Once);
         }
     }
 }

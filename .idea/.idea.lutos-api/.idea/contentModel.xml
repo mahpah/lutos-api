@@ -19,6 +19,7 @@
         <e p="Lutos.Domain" t="IncludeRecursive">
           <e p="Aggregates" t="Include">
             <e p="Common" t="Include">
+              <e p=".editorconfig" t="Include" />
               <e p="Currency.cs" t="Include" />
               <e p="Money.cs" t="Include" />
             </e>
@@ -26,6 +27,7 @@
           <e p="Lutos.Domain.csproj" t="IncludeRecursive" />
           <e p="Services" t="Include">
             <e p="Calculator.cs" t="Include" />
+            <e p="IBankService.cs" t="Include" />
           </e>
           <e p="bin" t="ExcludeRecursive" />
           <e p="obj" t="ExcludeRecursive">
