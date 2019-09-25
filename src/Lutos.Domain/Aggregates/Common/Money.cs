@@ -1,3 +1,5 @@
+using System;
+
 namespace Lutos.Domain.Aggregates.Common
 {
     public class Money
@@ -7,7 +9,9 @@ namespace Lutos.Domain.Aggregates.Common
 
         public Money(int amount, Currency currency)
         {
-            Amount = amount;
+            Amount = amount >= 0
+                ? amount
+                : throw new ArgumentException("Amount cannot have negative value", nameof(amount));
             Currency = currency;
         }
 

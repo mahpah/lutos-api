@@ -1,3 +1,4 @@
+using System;
 using FluentAssertions;
 using Lutos.Domain.Aggregates.Common;
 using Xunit;
@@ -20,6 +21,13 @@ namespace Lutos.Tests
         {
             var fiveBuck = new Money(5);
             fiveBuck.Currency.Should().Be(Usd);
+        }
+
+        [Fact]
+        public void money_cannot_have_negative_amount()
+        {
+            Action act = () => new Money(-10);
+            act.Should().Throw<ArgumentException>();
         }
     }
 }
