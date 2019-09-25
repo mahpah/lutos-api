@@ -31,5 +31,23 @@ namespace Lutos.Tests
         {
             _calculator.Sum(1, 2).Should().Be(_calculator.Sum(2, 1));
         }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(5)]
+        public void sum_of_anything_with_zero_is_itself(int a)
+        {
+            _calculator.Sum(a, 0).Should().Be(a);
+        }
+
+        [Fact]
+        public void add_one_twice_equal_to_add_two()
+        {
+            var a = 3;
+            var aAdd1 = _calculator.Sum(3, 1);
+            var aAdd1Add1 = _calculator.Sum(aAdd1, 1);
+            aAdd1Add1.Should().Be(_calculator.Sum(a, 2));
+        }
     }
 }
