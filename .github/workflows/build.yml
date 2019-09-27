@@ -1,13 +1,13 @@
 name: build
 
 on:
-  pull_request:
+  push:
     branches:
       - master
       - develop
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -16,5 +16,6 @@ jobs:
         dotnet-version: '2.2.402' # SDK Version to use.
     - name: test
       run: dotnet test lutos-api.sln
-
+    - name: build
+      run: dotnet test lutos-api.sln
 
