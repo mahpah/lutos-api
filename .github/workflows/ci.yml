@@ -1,12 +1,17 @@
+name: verify
+
 on:
   push:
     branches:
       - master
       - develop
 
-steps:
-- uses: actions/checkout@master
-- uses: actions/setup-dotnet@v1
-  with:
-    dotnet-version: '2.2.402' # SDK Version to use.
-- run: dotnet build <my project>
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '2.2.402' # SDK Version to use.
+    - run: dotnet test lutos-api.sln
